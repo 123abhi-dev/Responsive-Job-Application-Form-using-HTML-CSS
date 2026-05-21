@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        fieldset {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Job Application Form</h1>
+
+    <form>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="position">Select Position</label>
+        <select id="position" required>
+            <option value="">-- Choose Position --</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="designer">UI/UX Designer</option>
+            <option value="intern">Web Development Intern</option>
+        </select>
+
+        <fieldset>
+            <legend>Availability</legend>
+
+            <div class="radio-group">
+
+                <div class="radio-option">
+                    <input type="radio" id="fulltime" name="availability">
+                    <label for="fulltime">Full Time</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="parttime" name="availability">
+                    <label for="parttime">Part Time</label>
+                </div>
+
+                <div class="radio-option">
+                    <input type="radio" id="remote" name="availability">
+                    <label for="remote">Remote</label>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <label for="message">Why should we hire you?</label>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+
+</div>
+
+</body>
+  </html>
